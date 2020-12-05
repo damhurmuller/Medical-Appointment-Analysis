@@ -1,19 +1,25 @@
 
 # Analyzing the Medical Appointment No Shows Kaggle Dataset
-## by Mário Damhur
+### by Mário Damhur
 
-## Overview
+Also, you can check the blog post about this project: [medium](https://mriodamhur.medium.com/data-analysis-of-medical-appointment-no-show-in-brazil-e05bda56d173) 
+
+## CRISP-DM
+
+### Business Understanding
 
 A person makes a doctor appointment, receives all the instructions and no-show. Who to blame?
+Some questions to answer:
+- What are the age groups patients who have most turned up?
+- People who have some disease/disability usually turned up?
+- The Scholarship (Bolsa Família) for each gender contributed to turned up?
+- What is the impact of the location for the patients to turned up?
 
-This [dataset](https://www.kaggle.com/joniarroba/noshowappointments) collects information from 100k medical appointments in Brazil and is focused on the question of whether or not patients show up for their appointment. A number of characteristics about the patient are included in each row.
+There are a lot of other questions that we can ask, but for this project I limited the escope for them. :)
 
-It important to note that I analyzed this dataset always considering the relative proportion instead of only frequency/absolute proportion.
+### Data Understanding
 
-
-## Dataset
-
-110.527 medical appointments its 14 associated variables (characteristics). The most important one if the patient show-up or no-show to the appointment. Variable names are self-explanatory.
+This [dataset](https://www.kaggle.com/joniarroba/noshowappointments) collects information from 100k medical appointments in Brazil and is focused on the question of whether or not patients show up for their appointment. A number of characteristics about the patient are included in each row. 110.527 medical appointments its 14 associated variables (characteristics). The most important one if the patient show-up or no-show to the appointment. Variable names are self-explanatory.
 
 - **PatientId**: Identification of a patient
 - **AppointmentID**: Identification of each appointment
@@ -31,18 +37,17 @@ It important to note that I analyzed this dataset always considering the relativ
 - **No-show**: True or False.
 
 
-## Summary of Questions
+### Prepare Data
 
-Here are some questions that I want to answer about the dataset:
+Here I did the Data Wrangling process: Find issues, remove unnecessary data, deal with missing values, feature engineering, etc... All this steps to create a clean dataset. You can see more about the decision that I made on the jupyter code.
 
-- What are the age groups patients who have most turned up?
-- People who have some disease/disability usually turned up?
-- The Scholarship (Bolsa Família) for each gender contributed to turned up?
-- What is the impact of the location for the patients to turned up?
+### Data Modeling
 
-There are a lot of other questions that we can ask. In another time I will update this notebook to make him more complete. :)
+It is not always about machine learning! In this case, I used descriptive statistics to answer the business questions.
 
-## Key Insights
+### Evaluate the Results
+
+Results of the questions (Insights!):
 
 - In general, there are more people who turned up than not turned up.
 - Female is the greater proportion, woman takes way more care of they health in comparison to man.
